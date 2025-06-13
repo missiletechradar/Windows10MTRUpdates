@@ -12,3 +12,5 @@ English: reg add "HKLM\SOFTWARE\MTR" /v UserLanguage /t REG_SZ /d en-US /f
 Italian: reg add "HKLM\SOFTWARE\MTR" /v UserLanguage /t REG_SZ /d it-IT /f
 
 You can use custom language files too, refer to the changelog for more inforrmation. By default only english and italian are included and MTR-Settings is the only app with language file system support.
+
+Due to a bug in the update code the stopwatch execcutable isn't transferred to C:\Windows. But you can manually copy stopwatch.exe to c:\windows to get the updated stopwatch app.
