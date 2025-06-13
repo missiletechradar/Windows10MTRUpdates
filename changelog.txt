@@ -1,0 +1,34 @@
+- Added language file support for MTR Settings.
+
+Note: Only italian and english language files are available by default. You can make your own tho, just follow this tutorial:
+
+1. For example, you're making a french language file. Create a folder named fr-FR.
+2. Create a .lng file named mtr-settings.lng in that directory
+3. Copy a template from an existing language file(en-US recommended) and paste it in your newly made language file.
+4. Replace words and phrases with your own in french or whatever language you want.
+5. Save the language file. To apply it to MTR Settings type this command:
+
+reg add "HKLM\SOFTWARE\MTR" /v UserLanguage /t REG_SZ /d fr-FR /f
+
+Note: Replace fr-FR with the languge file you made, if it's japanese type jp-JP.
+
+Because, when MTR Settings starts, the way it looks for language files is by fetching the string from UserLanguage registry key and use that in a variable
+to look for the language folder.
+
+So if UserLanguage is jp-JP MTR settings you opened will look for:
+
+C:\Windows\mtrlang\jp-JP
+
+(note: don't actually create japanese language files, because for CMD to display japanese characters it needs codepage 932 and it looks ugly.
+Like really ugly, so just don't do it.
+
+Language file support will be added to other apps soon.
+
+- Fixed CLI mode bugs. And now it's more optimized.
+- Removed unnecessary built-in commands from climode.exe console.
+- The stopwatch app is now more optimized and instead of using a heavy powershell command to detect a space keypress, this command is used:
+- Fixed OOBERUN CLI mode bug. Make sure to install this system update as soon as you install build 951 full release for the best functionality.
+
+choice /c pn /t 1 /d n
+
+It replaces both the timeout delay, and the keyproc functon. Now it's all in 1 command, and way more efficient. If it detects P, it pauses the stopwatch. If it doesn't detect anything, it defaults to N which does nothing and the stopwatch continues.

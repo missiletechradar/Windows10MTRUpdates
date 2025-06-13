@@ -1,0 +1,20 @@
+MBF250613-21H2 (example)
+
+update ID:
+
+MBF - Minor Bug fix
+CUP - Critical Update
+PEU - Performance update
+LAU - Large updaste
+
+250613 meaning:
+
+25 - Year
+06 - Month
+13 - Day of when the update was released
+
+version perfix:
+
+1809 - Update is meant for 1809 edition of Windows 10 MTR
+21H2 - Update is meant for the 21H2 version of Windows 10 MTR
+18H2 - Update is meant for both versions of Windows 10 MTR
